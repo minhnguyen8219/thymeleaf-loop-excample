@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Example</title>
+
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        <tr th:each="customer, loopState  : ${customers}">
+            <td th:text="${loopState.count}"></td>
+            <td th:text="id = ${customer.getId()}"></td>
+            <td th:text="name = ${customer.getName()}"></td>
+            <td th:text="address = ${customer.getAddress()}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+    
+    
