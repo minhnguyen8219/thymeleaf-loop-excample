@@ -14,11 +14,11 @@
             <th>Name</th>
             <th>Address</th>
         </tr>
-        <tr th:each="customer, loopState  : ${customers}">
+        <tr th:each="customer, loopState : ${customers}">
             <td th:text="${loopState.count}"></td>
-            <td th:text="id = ${customer.getId()}"></td>
-            <td th:text="name = ${customer.getName()}"></td>
-            <td th:text="address = ${customer.getAddress()}"></td>
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.address}"></td>
         </tr>
     </table>
 
